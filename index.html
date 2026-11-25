@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breiscot — Developer & Game Maker</title>
+  <meta name="description" content="Personal site of Breiscot — developer and game maker from Italy. Games, web experiments and open source projects on GitHub and itch.io.">
+  <meta name="author" content="Breiscot">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:title" content="Breiscot — Developer & Game Maker">
+  <meta property="og:description" content="Games, web experiments and open source projects on GitHub and itch.io.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0a'/><text y='74' x='50' text-anchor='middle' font-size='64' font-family='monospace' font-weight='bold' fill='%23ffffff'>B</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Breiscot — home">
+        <span class="brand-mark">B</span>
+        <span class="brand-text">breiscot<span class="dim">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://github.com/Breiscot" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            Italy · Working for Hack Club
+          </p>
+
+          <h1 class="reveal">
+            Hi, I'm <span class="accent">Breiscot</span>.
+            <span class="hero-sub">I make <span id="typewriter" class="type">games.</span><span class="caret" aria-hidden="true">_</span></span>
+          </h1>
+
+          <p class="lead reveal">
+            Developer and game maker. I build games with Godot, web experiments
+            with plain HTML, CSS and JavaScript, and open source projects you can
+            play, fork and break.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="https://github.com/Breiscot" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://breiscot.itch.io/" target="_blank" rel="noopener">itch.io</a>
+          </div>
+
+          <dl class="hero-stats reveal">
+            <div>
+              <dt id="stat-repos">9</dt>
+              <dd>public repos</dd>
+            </div>
+            <div>
+              <dt id="stat-games">4</dt>
+              <dd>games on itch</dd>
+            </div>
+            <div>
+              <dt id="stat-followers">6</dt>
+              <dd>GitHub followers</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <em>breiscot — zsh</em>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">$</span> whoami</p>
+              <p class="t-out">breiscot</p>
+              <p><span class="t-prompt">$</span> cat stack.txt</p>
+              <p class="t-out">godot · gdscript · javascript · html · c#</p>
+              <p><span class="t-prompt">$</span> ls games/</p>
+              <p class="t-out">clinton-road/&nbsp; talking-ceiling/&nbsp; solar-system/&nbsp; mineandsurvive/</p>
+              <p><span class="t-prompt">$</span> ./build --site</p>
+              <p class="t-out t-ok">✓ breiscot.dev deployed</p>
+              <p><span class="t-prompt">$</span> <span class="blink">█</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <p class="section-kicker">// projects</p>
+          <h2>Things I've built</h2>
+          <p class="section-sub">
+            A selection of my work — games, simulations and web experiments,
+            hosted on <strong>GitHub</strong> and <strong>itch.io</strong>.
+          </p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="chip is-active" data-filter="all">All <span class="count">8</span></button>
+          <button class="chip" data-filter="github">GitHub <span class="count">8</span></button>
+          <button class="chip" data-filter="itch">itch.io <span class="count">4</span></button>
+          <button class="chip" data-filter="playable">Playable <span class="count">6</span></button>
+        </div>
+
+        <div class="grid" id="project-grid">
+
+          <!-- 01 -->
+          <article class="card reveal" data-sources="github itch" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">01</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge">itch.io</span>
+              </div>
+            </div>
+            <h3>Clinton Road</h3>
+            <p>
+              An open source survival game — every asset and script lives in the
+              repo, free to learn from. Born from the MilkyWay initiative by Hack Club.
+            </p>
+            <ul class="tags">
+              <li>Godot</li><li>GDScript</li><li>Survival</li><li>MIT</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/Clinton-Road-game" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.itch.io/clinton-road" target="_blank" rel="noopener">Play <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="card reveal" data-sources="github itch" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">02</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge">itch.io</span>
+              </div>
+            </div>
+            <h3>Talking Ceiling</h3>
+            <p>
+              A game about Ceiling, a little seal you have to take care of.
+              Feed it, watch it react, keep it happy.
+            </p>
+            <ul class="tags">
+              <li>Godot</li><li>GDScript</li><li>Pet sim</li><li>MIT</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/Talking-Ceiling" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.itch.io/talking-ceiling" target="_blank" rel="noopener">Play <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="card reveal" data-sources="github" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">03</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge badge-live">Live</span>
+              </div>
+            </div>
+            <h3>PlanetB</h3>
+            <p>
+              An interactive 3D globe and map of Earth, the Solar System and
+              fictional outer planets — with weather, the ISS tracker and a
+              solar system view.
+            </p>
+            <ul class="tags">
+              <li>JavaScript</li><li>3D</li><li>Maps</li><li>WebGL</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/PlanetB" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.github.io/PlanetB/" target="_blank" rel="noopener">Demo <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="card reveal" data-sources="github" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">04</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge badge-live">Live</span>
+              </div>
+            </div>
+            <h3>BreiscotOS</h3>
+            <p>
+              A personal WebOS inspired by macOS and Linux: terminal, browser,
+              games folder, dock, paint, calculator and more — all running in
+              the browser.
+            </p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>WebOS</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/BreiscotOS" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.github.io/BreiscotOS/" target="_blank" rel="noopener">Demo <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="card reveal" data-sources="github itch" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">05</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge">itch.io</span>
+              </div>
+            </div>
+            <h3>Solar System Simulation</h3>
+            <p>
+              A solar system simulation with orbital physics and interactive
+              functions — available as a C# project and a browser version.
+            </p>
+            <ul class="tags">
+              <li>C#</li><li>Physics</li><li>Simulation</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/Solar-System.Breiscot" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.itch.io/solarsystem-simulation-breiscot" target="_blank" rel="noopener">Play <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="card reveal" data-sources="github itch" data-playable="true">
+            <div class="card-top">
+              <span class="card-index">06</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+                <span class="badge">itch.io</span>
+              </div>
+            </div>
+            <h3>MineAndSurvive — Campfire Game</h3>
+            <p>
+              A mining and survival game — yes, the title says it all. Dig,
+              gather, survive the night around the campfire.
+            </p>
+            <ul class="tags">
+              <li>HTML</li><li>Game</li><li>Survival</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/MineAndSurvive-campfire-game" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+              <a href="https://breiscot.itch.io/campfire-game-mas" target="_blank" rel="noopener">Play <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 07 -->
+          <article class="card reveal" data-sources="github">
+            <div class="card-top">
+              <span class="card-index">07</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+              </div>
+            </div>
+            <h3>SlowBCar</h3>
+            <p>
+              My first game made with Godot: a 3D car driving around a track.
+              Where the habit of building things started.
+            </p>
+            <ul class="tags">
+              <li>Godot</li><li>GDScript</li><li>3D</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/SlowBCar---Game" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 08 -->
+          <article class="card reveal" data-sources="github">
+            <div class="card-top">
+              <span class="card-index">08</span>
+              <div class="card-badges">
+                <span class="badge">GitHub</span>
+              </div>
+            </div>
+            <h3>breiscot.dev</h3>
+            <p>
+              This site — my personal portfolio built from scratch with plain
+              HTML, CSS and JavaScript. No frameworks, no build step.
+            </p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/Breiscot/breiscot.dev" target="_blank" rel="noopener">Code <span class="arr">↗</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="grid-empty" id="grid-empty" hidden>No projects in this category yet.</p>
+
+        <p class="more reveal">
+          …and more on
+          <a href="https://github.com/Breiscot?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+          and
+          <a href="https://breiscot.itch.io/" target="_blank" rel="noopener">itch.io</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy reveal">
+          <p class="section-kicker">// about</p>
+          <h2>A bit about me</h2>
+          <p>
+            I'm a developer and game maker from Italy. I spend my time between
+            Godot projects, web experiments and open source code — I like
+            building things that people can actually touch: games you can play
+            in the browser, tools you can fork, sites that work without a
+            framework.
+          </p>
+          <p>
+            I work for <strong>Hack Club</strong>, and some of my projects were
+            born from community initiatives like MilkyWay. Everything you see
+            here is open source — feel free to read the code.
+          </p>
+        </div>
+
+        <div class="about-skills reveal">
+          <h3>Stack</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Game dev</span><span class="skill-val">Godot · GDScript</span></li>
+            <li><span class="skill-name">Frontend</span><span class="skill-val">HTML · CSS · JavaScript</span></li>
+            <li><span class="skill-name">Systems</span><span class="skill-val">C#</span></li>
+            <li><span class="skill-name">Interests</span><span class="skill-val">WebOS · Simulations · 3D</span></li>
+            <li><span class="skill-name">Now</span><span class="skill-val">Working for Hack Club</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container contact reveal">
+        <p class="section-kicker">// contact</p>
+        <h2>Let's build something.</h2>
+        <p class="section-sub">
+          Code, games, collaborations or just a hello — the doors are open.
+        </p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://github.com/Breiscot" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://breiscot.itch.io/" target="_blank" rel="noopener">itch.io</a>
+          <a class="btn btn-ghost" href="https://github.com/Breiscot?tab=followers" target="_blank" rel="noopener">Follow me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Breiscot — breiscot.dev</p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript. No frameworks.</p>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
