@@ -204,6 +204,25 @@
   if ("fetch" in window) fetchStats();
 
   /* ---------------------------------------------------------
+     Side mascots — click to say hi
+  --------------------------------------------------------- */
+  const mascotPhrases = ["hi!", "hey 👋", "gg", "let's build!", "meep!", "hack club!", "boop!", "👋"];
+
+  $$(".mascot").forEach((mascot) => {
+    const bubble = mascot.querySelector(".mascot-bubble");
+    let hideTimer;
+
+    mascot.addEventListener("click", () => {
+      mascot.classList.remove("pop");
+      void mascot.offsetWidth; // restart the animation
+      if (bubble) bubble.textContent = mascotPhrases[Math.floor(Math.random() * mascotPhrases.length)];
+      mascot.classList.add("pop");
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => mascot.classList.remove("pop"), 1600);
+    });
+  });
+
+  /* ---------------------------------------------------------
      Footer year
   --------------------------------------------------------- */
   const year = $("#year");

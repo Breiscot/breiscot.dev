@@ -816,18 +816,129 @@ button { font: inherit; }
 /* =========================================================
    REVEAL ANIMATION
    ========================================================= */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
 
-.reveal.in { opacity: 1; transform: none; }
+.js .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   .pulse, .caret, .blink { animation: none; }
+}
+
+/* =========================================================
+   HACKATIME STATS
+   ========================================================= */
+.hackatime-frame {
+  max-width: 640px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.9);
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.hackatime-frame:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}
+
+.hackatime-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: grayscale(1);
+  transition: filter 0.55s var(--ease);
+}
+
+.hackatime-frame:hover img { filter: grayscale(0); }
+
+/* =========================================================
+   SIDE MASCOTS
+   ========================================================= */
+.mascot {
+  position: fixed;
+  bottom: 14px;
+  z-index: 60;
+  display: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease);
+}
+
+.mascot-left  { left: 8px; }
+.mascot-right { right: 8px; }
+
+@media (min-width: 1280px) {
+  .mascot { display: block; width: clamp(78px, 6.5vw, 108px); }
+}
+
+.mascot img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  animation: mascot-bob 3.6s ease-in-out infinite;
+}
+
+.mascot-right img { animation-delay: -1.8s; }
+
+@keyframes mascot-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-7px); }
+}
+
+.mascot-left:hover  { transform: translateX(6px) rotate(5deg) scale(1.06); }
+.mascot-right:hover { transform: translateX(-6px) rotate(-5deg) scale(1.06); }
+.mascot:active      { transform: scale(0.94); }
+
+.mascot.pop img { animation: mascot-jump 0.6s var(--ease); }
+
+@keyframes mascot-jump {
+  0%   { transform: translateY(0) scale(1); }
+  30%  { transform: translateY(-24px) scale(1.06); }
+  55%  { transform: translateY(0) scale(0.95); }
+  75%  { transform: translateY(-8px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.mascot-bubble {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  padding: 7px 13px;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 22px -10px rgba(0, 0, 0, 0.85);
+}
+
+.mascot.pop .mascot-bubble { animation: mascot-bubble 1.6s var(--ease); }
+
+@keyframes mascot-bubble {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(6px) scale(0.8); }
+  15%  { opacity: 1; transform: translateX(-50%) translateY(-4px) scale(1); }
+  75%  { opacity: 1; transform: translateX(-50%) translateY(-9px); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-15px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot img { animation: none; }
 }
 
 /* =========================================================

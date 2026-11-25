@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
@@ -33,6 +34,7 @@
       </a>
 
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#hackatime">Hackatime</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -111,6 +113,29 @@
               <p><span class="t-prompt">$</span> <span class="blink">█</span></p>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HACKATIME ================= -->
+    <section class="section section-alt" id="hackatime">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <p class="section-kicker">// hackatime</p>
+          <h2>Hackatime stats</h2>
+          <p class="section-sub">
+            My live coding activity tracked by <strong>Hackatime</strong> —
+            hours spent per language across all my projects.
+          </p>
+        </div>
+
+        <div class="hackatime-frame reveal">
+          <img
+            src="https://github-readme-stats.hackclub.dev/api/wakatime?username=23513&amp;api_domain=hackatime.hackclub.com&amp;theme=dark&amp;custom_title=Hackatime+Stats&amp;layout=compact&amp;cache_seconds=0&amp;langs_count=8"
+            alt="Hackatime stats — GDScript 121h, HTML 80h, JavaScript 76h, C# 19h, Python 15h, CSS 15h and more"
+            width="495" height="190" loading="lazy">
         </div>
 
       </div>
@@ -419,6 +444,16 @@
       <a class="to-top" href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <!-- ================= MASCOTS ================= -->
+  <button class="mascot mascot-left" type="button" aria-label="Mascot — click to say hi">
+    <span class="mascot-bubble" aria-hidden="true">hi!</span>
+    <img src="assets/img/mascot-left.png" width="266" height="348" alt="">
+  </button>
+  <button class="mascot mascot-right" type="button" aria-label="Mascot — click to say hi">
+    <span class="mascot-bubble" aria-hidden="true">hi!</span>
+    <img src="assets/img/mascot-right.png" width="266" height="348" alt="">
+  </button>
 
   <script src="main.js"></script>
 </body>
