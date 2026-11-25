@@ -98,7 +98,7 @@
     "games.",
     "web experiences.",
     "simulations.",
-    "weird little operating systems."
+    "an operating system in the browser."
   ];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
