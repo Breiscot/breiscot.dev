@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breiscot — About me</title>
+  <meta name="description" content="Hi, I'm Breiscot — developer, game maker and artist from Italy. Working for Hack Club.">
+  <meta name="author" content="Breiscot">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:title" content="Breiscot — About me">
+  <meta property="og:description" content="Developer, game maker and artist from Italy. Working for Hack Club.">
+  <meta property="og:type" content="profile">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0a'/><text y='74' x='50' text-anchor='middle' font-size='64' font-family='monospace' font-weight='bold' fill='%23ffffff'>B</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <div class="nav-left">
+        <a class="brand" href="#top" aria-label="Breiscot — home">
+          <span class="brand-mark">B</span>
+          <span class="brand-text">breiscot<span class="dim">.me</span></span>
+        </a>
+        <nav class="nav-sites" aria-label="Other Breiscot sites">
+          <a href="../" title="breiscot.dev — projects">.dev</a>
+          <a href="../breiscot.art/" title="breiscot.art — drawings">.art</a>
+        </nav>
+      </div>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="nav-ctas">
+          <a class="nav-cta" href="https://github.com/Breiscot" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="nav-cta" href="https://hackclub.enterprise.slack.com/team/U07P4SA3LF4" target="_blank" rel="noopener">Slack ↗</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            Italy · Working for Hack Club
+          </p>
+
+          <h1 class="reveal">
+            Hi, I'm <span class="accent">Breiscot</span>.
+            <span class="hero-sub">I'm <span id="typewriter" class="type">a developer.</span><span class="caret" aria-hidden="true">_</span></span>
+          </h1>
+
+          <p class="lead reveal">
+            Developer, game maker and artist from Italy. I build games with
+            Godot, draw digital art, and ship websites with plain HTML, CSS
+            and JavaScript — no frameworks.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#contact">Contact me</a>
+          </div>
+
+          <dl class="hero-stats reveal">
+            <div>
+              <dt id="stat-repos">9</dt>
+              <dd>public repos</dd>
+            </div>
+            <div>
+              <dt id="stat-games">4</dt>
+              <dd>games on itch</dd>
+            </div>
+            <div>
+              <dt id="stat-followers">6</dt>
+              <dd>GitHub followers</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal">
+          <figure class="hero-gif">
+            <img src="assets/img/seal.gif" width="350" height="350"
+                 alt="A grumpy little seal staring at you">
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy reveal">
+          <p class="section-kicker">// about</p>
+          <h2>A bit about me</h2>
+          <p>
+            I'm a developer and game maker from Italy. I spend my time between
+            Godot projects, web experiments and open source code — I like
+            building things that people can actually touch: games you can play
+            in the browser, tools you can fork, sites that work without a
+            framework.
+          </p>
+          <p>
+            I work for <strong>Hack Club</strong>, and some of my projects were
+            born from community initiatives like MilkyWay. Everything you see
+            on my sites is open source — feel free to read the code.
+          </p>
+        </div>
+
+        <div class="about-skills reveal">
+          <h3>Stack</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Game dev</span><span class="skill-val">Godot · GDScript</span></li>
+            <li><span class="skill-name">Frontend</span><span class="skill-val">HTML · CSS · JavaScript</span></li>
+            <li><span class="skill-name">Systems</span><span class="skill-val">C#</span></li>
+            <li><span class="skill-name">Art</span><span class="skill-val">Digital drawing · Fan art</span></li>
+            <li><span class="skill-name">Interests</span><span class="skill-val">WebOS · Simulations · 3D</span></li>
+            <li><span class="skill-name">Now</span><span class="skill-val">Working for Hack Club</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container contact reveal">
+        <button class="mascot mascot-left" type="button" aria-label="Mascot — click to say hi">
+          <span class="mascot-bubble" aria-hidden="true">hi!</span>
+          <img src="assets/img/mascot-left.png" width="266" height="348" alt="">
+        </button>
+        <button class="mascot mascot-right" type="button" aria-label="Mascot — click to say hi">
+          <span class="mascot-bubble" aria-hidden="true">hi!</span>
+          <img src="assets/img/mascot-right.png" width="266" height="348" alt="">
+        </button>
+        <p class="section-kicker">// contact</p>
+        <h2>Let's build something.</h2>
+        <p class="section-sub">
+          Code, games, collaborations or just a hello — the doors are open.
+        </p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://hackclub.enterprise.slack.com/team/U07P4SA3LF4" target="_blank" rel="noopener">Slack</a>
+          <a class="btn btn-ghost" href="https://github.com/Breiscot" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://breiscot.itch.io/" target="_blank" rel="noopener">itch.io</a>
+          <a class="btn btn-ghost" href="https://github.com/Breiscot?tab=followers" target="_blank" rel="noopener">Follow me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Breiscot — <a href="../">breiscot.dev</a> · <a href="../breiscot.art/">breiscot.art</a> · <a href="./">breiscot.me</a></p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript. No frameworks.</p>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

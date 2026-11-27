@@ -1052,3 +1052,52 @@ button { font: inherit; }
   .hero-stats { flex-wrap: wrap; row-gap: 18px; }
   .card { padding: 22px 20px 20px; }
 }
+
+/* =========================================================
+   SITE SWITCHER (breiscot.dev / breiscot.art / breiscot.me)
+   ========================================================= */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.nav-sites {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-sites a {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--text-faint);
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.nav-sites a:hover {
+  color: var(--white);
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+
+/* footer: the three sites */
+.footer-inner p a {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.25s var(--ease);
+}
+
+.footer-inner p a:hover { color: var(--white); }
+
+@media (max-width: 760px) {
+  .nav-left { gap: 10px; }
+  .nav-sites { gap: 5px; }
+  .nav-sites a { padding: 6px 9px; font-size: 11.5px; }
+}
